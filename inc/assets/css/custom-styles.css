@@ -1,0 +1,701 @@
+/* ----------------------------------- */
+/*    ESTILOS CUSTOMIZADOS PELA DEK
+/* ----------------------------------- */
+body{
+	background: #F2F4F7!important;
+}
+textarea:not(.editor-post-title__input), 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="email"], 
+input[type="month"], 
+input[type="number"], 
+input[type="password"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="text"], 
+input[type="time"], 
+input[type="url"], 
+input[type="week"]{
+	box-shadow: none!important
+}
+#primary {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.site-content {
+    border-top: none;
+    margin-top: 0px;
+}
+.btn-cadastrar{
+	background:#FF9800;
+	color:#FFFFFF;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: 0px 1px 7px rgba(0,0,0,.3);
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+.btn-cadastrar:hover{
+	background:#cddc39;
+	color:#FFFFFF;
+	border-radius: 30px;
+	-webkit-box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+	-moz-box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+	-ms-box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+	-o-box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+	box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+}
+.entry-content {
+    margin-bottom: 0px;
+}
+a {
+    color: #109154;
+    text-decoration: none;
+    outline: none;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+a:hover {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+}
+div#header-principal{
+	height: 86px;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s
+}
+#logo-header, div#header-principal{
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s
+}
+#logo-header.margintop-0 > .elementor-widget-container{
+	margin-top: 0;
+}
+section#header-principal{
+	width: 100%!important;
+}
+div.no-padding{
+	padding: 0;
+}
+.padding-left-0{
+	padding-left: 0;
+}
+.padding-right-0{
+	padding-right: 0;
+}
+div.sidebar-archive aside.widget-area{
+	width: 100%;
+}
+div.sidebar-archive aside.widget-area section.widget{
+	background: #FFFFFF;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    margin: 0px 0px 15px 0px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+div.sidebar-archive aside.widget-area section.widget img{
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Single Pago */
+span.icon-sidebar-perfil i{
+	padding: 8px 0px 0px 0px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 12px;
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    text-align: center;
+    margin-right: 5px;
+}
+span.icon-sidebar-perfil i{
+	color: #FFFFFF;
+}
+span.icon-sidebar-perfil.cor1 i{
+	background: #009688;
+}
+span.icon-sidebar-perfil.cor2 i{
+	background: #4CAF50;
+}
+span.icon-sidebar-perfil.cor3 i{
+	background: #8BC34A;
+}
+span.icon-sidebar-perfil.cor4 i{
+	background: #CDDC39;
+	font-weight: normal;
+}
+span.icon-sidebar-perfil.cor5 i{
+	background: #FFEB3B;
+	font-weight: normal;
+}
+span.icon-sidebar-perfil.cor6 i{
+	background: #FF9800;
+	font-weight: normal;
+}
+.eael-advance-tabs .eael-tabs-nav > ul li{
+	border-bottom: 1.5px solid #FFFFFF;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.eael-advance-tabs .eael-tabs-nav > ul li.active,
+.eael-advance-tabs .eael-tabs-nav > ul li:hover{
+	border-bottom: 1.5px solid #009688;
+}
+div#section-tags p a{
+	font-size: 13px;
+    display: inline-block;
+    padding: 5px 9px 8px 9px;
+    margin: 3px 3px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #009688;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+div#section-tags p a:hover{
+	border: 1px solid #009688;
+	background-color: #009688!important;
+	color: #FFFFFF;
+}
+div.section-descricao-completa{
+	height: 100px;
+    overflow: hidden;
+}
+.section-descricao-completa p,
+.eael-tabs-content p,
+.section-descricao-completa li,
+.eael-tabs-content li,
+.section-descricao-completa h1,
+.eael-tabs-content h1,
+.section-descricao-completa h2,
+.eael-tabs-content h2,
+.section-descricao-completa h3,
+.eael-tabs-content h3,
+.section-descricao-completa h4,
+.eael-tabs-content h4,
+.section-descricao-completa h5,
+.eael-tabs-content h5,
+.section-descricao-completa h5,
+.eael-tabs-content h5{
+	font-size: .9rem;
+	margin-bottom: 5px;
+}
+.section-descricao-completa h1,
+.eael-tabs-content h1,
+.section-descricao-completa h2,
+.eael-tabs-content h2,
+.section-descricao-completa h3,
+.eael-tabs-content h3,
+.section-descricao-completa h4,
+.eael-tabs-content h4,
+.section-descricao-completa h5,
+.eael-tabs-content h5,
+.section-descricao-completa h5,
+.eael-tabs-content h5{
+	font-weight: bold;
+}
+
+/* Button Call WhatsApp */
+a.btn-call-wpp:hover{
+	cursor: pointer;
+}
+a.btn-call-wpp {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	outline: none;
+	position: relative;
+	border: none;
+	-webkit-border-radius: 60px 60px 60px 60px;
+	-moz-border-radius: 60px 60px 60px 60px;
+	-ms-border-radius: 60px 60px 60px 60px;
+	-o-border-radius: 60px 60px 60px 60px;
+	border-radius: 60px 60px 60px 60px;
+	padding: 6px 30px 6px 30px;					
+	overflow: hidden;
+	color: #ffffff;
+	background-color: #109154;
+	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+	margin-top: 3px;
+}
+a.btn-call-wpp i{
+	font-weight: normal;
+}
+a.btn-call-wpp:before,
+a.btn-call-wpp div{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 20px;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+/*button:before (attr data-hover)*/
+a.btn-call-wpp:hover:before{
+	opacity: 1; transform: translate(0,0);
+}
+a.btn-call-wpp:before{
+	content: attr(data-hover);
+	position: absolute;
+	top: 10px; 
+	left: 0;
+	width: 100%;
+	font-size: 16px;
+	opacity: 0;
+	transform: translate(100%,0);
+}
+/*button div (button text before hover)*/
+a.btn-call-wpp:hover div{opacity: 0; transform: translate(-100%,0);}
+div.btn-call-wpp-wrapper div.elementor-shortcode,
+div.smartlinks-shortcode div.elementor-shortcode{
+	display: none;
+}
+/* Smartlinks */
+div.botoes-teste{
+	text-align: left; 
+	max-width: 100%;
+	padding: 0;
+}
+div.botoes-teste2{
+	max-width: 300px;
+	text-align: left; 
+}
+div.anuncios{
+	margin:0;
+	padding:0;
+}
+div.anuncios div.btn-link,
+div.anuncios div.btn-link-mobile{
+	display: inline-block; 
+	min-height: 35px; 
+	min-width: 35px; 
+	text-align: center; 
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	-ms-border-radius: 50px; 
+	-o-border-radius: 50px;
+	border-radius: 50px;  
+	color: #FFFFFF; 
+	cursor: pointer; 
+    padding: 3px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+div.anuncios div.btn-link div.icon-button,
+div.anuncios div.btn-link-mobile div.icon-button{
+	display: inline-block;
+}
+div.anuncios div.btn-link.ativo,
+div.anuncios div.btn-link-mobile.ativo{
+	/*min-width: auto; */
+	/*cursor: text; */
+}
+div.anuncios div.btn-link.btn-link:hover,
+div.anuncios div.btn-link-mobile.btn-link:hover{
+	text-decoration: none;
+}
+div.anuncios div.btn-link:hover,
+div.anuncios div.btn-link-mobile:hover{
+	color: #FFF; 
+}
+div.anuncios div.btn-link a:hover,
+div.anuncios div.btn-link-mobile a:hover{
+	text-decoration:none;
+}
+div.anuncios div.btn-link i,
+div.anuncios div.btn-link-mobile i{
+	font-size: 16px;
+}
+div.anuncios div.btn-link i:before,
+div.anuncios div.btn-link-mobile i:before{
+	line-height: 0;
+}
+div.anuncios div.btn-link i:before,
+div.anuncios div.btn-link-mobile i:before{
+	line-height: 0px;
+}
+div.anuncios div.btn-link i{
+	display: inline-block;
+	padding: 5px;
+}
+div.anuncios-pagos div.btn-link div.descript a,
+div.anuncios-pagos div.btn-link-mobile div.descript a{
+	cursor: pointer;
+    display: inline-block;
+    padding: 2px 5px;
+    color: green;
+    background: #fff;
+    font-weight: bold;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    line-height: 100%;
+    margin-left: 2px;
+}
+
+div.anuncios-pagos div.btn-link.endereco a{
+    margin: 2px 2px 2px 2px;
+}
+div.anuncios-pagos div.btn-link.email a{
+	margin-top: 2px;	
+}
+div.anuncios-pagos div.btn-link a i,
+div.anuncios-pagos div.btn-link-mobile a i{
+	color: #FFFFFF; 
+}
+div.anuncios div.descript{
+	float: right;
+    display: none;
+    font-size: 13px;
+    margin-left: 0;
+    margin-right: 3px;
+    margin-top: 2px;
+    max-width: 230px;
+    text-align: left;
+    line-height: 115%;
+}
+div.anuncios div.descript:after{
+	float: none;
+}
+div.anuncios div.phone div.descript,
+div.anuncios div.whatsapp div.descript{
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+/* MOBILE */
+
+div.anuncios-pagos div.btn-link.phone,
+div.anuncios-pagos div.btn-link-mobile.phone,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.phone{
+	background:#009688; 
+	border:2px solid #009688; 
+}
+div.anuncios div.btn-link.endereco div.descript,
+div.anuncios div.btn-link-mobile.endereco div.descript-mobile,
+div.anuncios div.btn-link.email div.descript,
+div.anuncios div.btn-link-mobile.email div.descript-mobile{
+	line-height: 115%;
+	font-size: 12px;
+	margin-top: 0px;
+	text-align: center;
+	margin-left: 0;
+}
+div.anuncios-gratis div.btn-link.endereco div.descript,
+div.anuncios-gratis div.btn-link-mobile.endereco div.descript-mobile,
+div.anuncios-gratis div.btn-link.email div.descript,
+div.anuncios-gratis div.btn-link-mobile.email div.descript-mobile{
+	margin-top: 5px;
+}
+div.anuncios div.btn-link div.descript a small.ir,
+div.anuncios div.btn-link-mobile-footer div.descript-mobile a small.ir{
+	font-weight: bold;
+    display: inline-block;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 12px;
+    background: #fff;
+    color: green;
+}
+div.anuncios div.btn-link div.descript a small.ir{
+	padding: 2px 5px;
+}
+div.anuncios div.btn-link-mobile-footer div.descript-mobile a small.ir{
+    padding: 2px 10px;
+    margin-left: 5px;
+}
+div.anuncios-mobile div.btn-link,
+div.anuncios-mobile div.btn-link-mobile{
+	margin-bottom: 5px;
+}
+div.anuncios-mobile div.descript{
+    max-width: 150px;
+}
+div.anuncios-mobile div.descript-mobile{
+    max-width: 180px;
+}
+div.anuncios div.btn-link-mobile-footer div.descript-mobile{
+	font-weight: bold;
+	color: #FFFFFF;
+	display: none; 
+	float: none;
+	text-align: center;
+	margin: auto;
+	max-width: 100%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+div.anuncios-pagos div.btn-link.email,
+div.anuncios-pagos div.btn-link-mobile.email,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.email{
+	background: #4CAF50;
+	border:2px solid #4CAF50;
+}
+div.anuncios-pagos div.btn-link.endereco,
+div.anuncios-pagos div.btn-link-mobile.endereco,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.endereco{
+	background: #8BC34A; 
+	border:2px solid #8BC34A;
+}
+div.anuncios-pagos div.btn-link.facebook,
+div.anuncios-pagos div.btn-link-mobile.facebook,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.facebook{
+	background: #CDDC39; 
+	border:2px solid #CDDC39;
+}
+div.anuncios-pagos div.btn-link.instagram,
+div.anuncios-pagos div.btn-link-mobile.instagram,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.instagram{
+	background: #FFEB3B; 
+	border:2px solid #FFEB3B;
+}
+div.anuncios-pagos div.btn-link.site,
+div.anuncios-pagos div.btn-link-mobile.site,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.site{
+	background: #FF9800; 
+	border:2px solid #FF9800;
+}
+div.anuncios-pagos div.btn-link.whatsapp,
+div.anuncios-pagos div.btn-link-mobile.whatsapp,
+div.anuncios-pagos div.btn-link-mobile-footer div.descript-mobile.whatsapp{
+	background: #109154; 
+	border:2px solid #109154;
+}
+div.anuncios-gratis div.btn-link.instagram, 
+div.anuncios-gratis div.btn-link.whatsapp, 
+div.anuncios-gratis div.btn-link-mobile.instagram, 
+div.anuncios-gratis div.btn-link-mobile.whatsapp,
+div.anuncios-pagos div.btn-link.facebook i,
+div.anuncios-pagos div.btn-link.instagram i, 
+div.anuncios-gratis div.btn-link.facebook i,
+div.anuncios-gratis div.btn-link.instagram i,
+div.anuncios-gratis div.btn-link.whatsapp i, 
+div.anuncios-pagos div.btn-link-mobile.facebook i, 
+div.anuncios-pagos div.btn-link-mobile.instagram i, 
+div.anuncios-gratis div.btn-link-mobile.facebook i,
+div.anuncios-gratis div.btn-link-mobile.instagram i, 
+div.anuncios-gratis div.btn-link-mobile.instagram i, 
+div.anuncios-gratis div.btn-link-mobile.whatsapp i, 
+div.anuncios-pagos div.btn-link.facebook div.descript,
+div.anuncios-pagos div.btn-link.instagram div.descript,
+div.anuncios-gratis div.btn-link.facebook div.descript,
+div.anuncios-gratis div.btn-link.instagram div.descript,
+div.anuncios-gratis div.btn-link.whatsapp div.descript,
+div.anuncios-pagos div.btn-link-mobile.facebook div.descript-mobile,
+div.anuncios-pagos div.btn-link-mobile.instagram div.descript-mobile,
+div.anuncios-gratis div.btn-link-mobile.facebook div.descript-mobile,
+div.anuncios-gratis div.btn-link-mobile.instagram div.descript-mobile,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.instagram,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.whatsapp{
+	color: #109154; 
+}
+div.anuncios-gratis div.btn-link.phone,
+div.anuncios-gratis div.btn-link-mobile.phone,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.phone{
+	border:2px solid #009688; 
+}
+div.anuncios-gratis div.btn-link.email,
+div.anuncios-gratis div.btn-link-mobile.email,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.email{
+	border:2px solid #4CAF50; 
+}
+div.anuncios-gratis div.btn-link.endereco,
+div.anuncios-gratis div.btn-link-mobile.endereco,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.endereco{
+	border:2px solid #8BC34A; 
+}
+div.anuncios-gratis div.btn-link.facebook,
+div.anuncios-gratis div.btn-link-mobile.facebook,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.facebook{
+	border:2px solid #CDDC39; 
+}
+div.anuncios-gratis div.btn-link.instagram,
+div.anuncios-gratis div.btn-link-mobile.instagram,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.instagram{
+	border:2px solid #FFEB3B; 
+}
+div.anuncios-gratis div.btn-link.site,
+div.anuncios-gratis div.btn-link-mobile.site,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.site{
+	border:2px solid #FF9800; 
+}
+div.anuncios-gratis div.btn-link.whatsapp,
+div.anuncios-gratis div.btn-link-mobile.whatsapp,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.whatsapp{
+	border:2px solid #109154; 
+}
+div.anuncios-gratis div.btn-link.phone, 
+div.anuncios-gratis div.btn-link.phone i, 
+div.anuncios-gratis div.btn-link.phone div.descript,
+div.anuncios-gratis div.btn-link-mobile.phone, 
+div.anuncios-gratis div.btn-link-mobile.phone i, 
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.phone{
+	color:#009688; 
+}
+div.anuncios-gratis div.btn-link.email, 
+div.anuncios-gratis div.btn-link.email i, 
+div.anuncios-gratis div.btn-link.email div.descript,
+div.anuncios-gratis div.btn-link-mobile.email, 
+div.anuncios-gratis div.btn-link-mobile.email i, 
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.email{
+	color: #4CAF50; 
+}
+div.anuncios-gratis div.btn-link.endereco, 
+div.anuncios-gratis div.btn-link.endereco i, 
+div.anuncios-gratis div.btn-link.endereco div.descript,
+div.anuncios-gratis div.btn-link-mobile.endereco, 
+div.anuncios-gratis div.btn-link-mobile.endereco i, 
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.endereco{
+	color: #8BC34A;
+}
+div.anuncios-gratis div.btn-link.facebook, 
+div.anuncios-gratis div.btn-link.facebook i, 
+div.anuncios-gratis div.btn-link.facebook div.descript,
+div.anuncios-gratis div.btn-link-mobile.facebook, 
+div.anuncios-gratis div.btn-link-mobile.facebook i, 
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.facebook{
+	color: #CDDC39; 
+}
+div.anuncios-gratis div.btn-link.site, 
+div.anuncios-gratis div.btn-link.site div.descript i, 
+div.anuncios-gratis div.btn-link.site div.descript,
+div.anuncios-gratis div.btn-link-mobile.site, 
+div.anuncios-gratis div.btn-link-mobile.site div.descript-mobile i, 
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.site{
+	color: #FF9800; 
+}
+
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.phone,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.whatsapp{
+	font-size: 18px;
+}
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.email,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.endereco,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.facebook,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.instagram,
+div.anuncios-gratis div.btn-link-mobile-footer div.descript-mobile.site{
+	font-size: 14px;
+}
+span.lp-close-screen{
+	display: none!important;
+}
+div.smartlinks-destaque div.botoes-teste{
+	text-align: center;
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width:769px){
+	.hidden-sm{
+		display: none;
+	}
+}
+@media(max-width:768px){
+	.hidden-xs{
+		display: none;
+	}
+	div.eael-advance-tabs div.eael-tabs-nav>ul li {
+	    display: inline-block!important;
+	    width: 33%!important;
+	    padding: 15px 5px;
+	    font-size: 14px!important;
+	    flex: none!important;
+	}
+	div.anuncios {
+	    text-align: center;
+	}
+	div.anuncios-mobile div.btn-link,
+	div.anuncios-mobile div.btn-link-mobile{
+		margin-bottom: 10px!important;
+	}
+	div#menu-principal nav{
+		margin-top: 20px;
+		background: none;
+	}
+	div#menu-principal nav ul{
+		background-color: rgba(16, 145, 84, 0.95);
+		height: 100vh;
+	}
+	div#menu-principal nav ul li{
+		margin: 0;	
+		border-bottom: 1px solid #EEF6E4;
+		box-shadow: none;
+		transition: all .2s ease;
+		-webkit-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-ms-transition: all .2s ease;
+		-o-transition: all .2s ease;
+	}
+	div#menu-principal nav ul li:last-child{
+		border-bottom: none;
+	}
+	div#menu-principal nav ul li a{
+		padding: 15px 15px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #ffffff;
+		box-shadow: none;
+	}
+	div#menu-principal nav ul li a:hover{
+		color: #109154;
+		background: #FFFFFF;
+	}
+	div.anuncios div.btn-link i:before,
+	div.anuncios div.btn-link-mobile i:before{
+		line-height: 24px;
+	}
+}

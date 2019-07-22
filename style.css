@@ -1,0 +1,25 @@
+/*
+Theme Name: Temzap
+Theme URI: https://temzap.com.br
+Author: Piece Digital & DekMídia Marketing Digital
+Author URI: https://piece.com.br
+Description:  
+Version: 1.0
+Text Domain: temzap
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+*/
+/*
+Theme Name: TEMZAP
+Theme URI: https://temzap.com.br
+Author: Cristiano Kile | Douglas Rodolfo
+Author URI: https://dekmidia.com.br
+Description: O TEMZAP é o seu guia de negócios para contatos via WhatsApp.
+Version: 1.0.0
+Text Domain: temzap
+Tags: 
+
+@charset "UTF-8";
+
+/* Bootstrap */
+@import url("inc/assets/css/theme-styles.css");
+@import url("inc/assets/css/custom-styles.css");
