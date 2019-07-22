@@ -216,14 +216,14 @@
 				<?php $rando13 = $randomClass++; ?>
 				<?php $site = formatadados("site" , $infos['site']); ?>
 				<?php $short = mb_strimwidth($site, 0, 20, "...");?>
-				<?php $link = $site; ?>
+				<?php $link = $infos['site']; ?>
 				<div class="btn-link site" rel="<?php echo $rando13;?>" title="<?php echo $infos['site']; ?>">
 					<div class="icon-button">
 						<i class="fas fa-desktop"></i>
 					</div>
 					<div class="descript description<?php echo $rando13;?>"> 
 						<?php echo $short; ?>
-						<a href="<?php echo $link;?>" target="_blank">
+						<a href="<?php echo $infos['site']; ?>" target="_blank">
 							<small class="ir">Abrir</small>
 						</a>
 					</div>
