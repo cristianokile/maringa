@@ -53,5 +53,10 @@
                     }
                 });
             });
+            jQuery( ".icon-categorias" ).hide();
+            jQuery( ".mais-categorias-1" ).click(function() {
+                jQuery( ".icon-categorias" ).show();
+                jQuery( ".mais-categorias-1" ).hide();
+            });
         });
     });
