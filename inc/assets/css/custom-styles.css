@@ -637,6 +637,9 @@ span.lp-close-screen{
 div.smartlinks-destaque div.botoes-teste{
 	text-align: center;
 }
+section.icon-categorias{
+	display: none;
+}
 
 /* BREAKPOINTS */
 @media screen and (min-width:769px){

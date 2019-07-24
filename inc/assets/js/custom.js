@@ -54,8 +54,13 @@
                 });
             });
             jQuery( ".icon-categorias" ).hide();
+            jQuery( "#mais-categorias" ).click(function() {
+                jQuery( ".icon-categorias" ).toggle( "fast", function() {
+                });
+            });
+            jQuery( ".icon-categorias" ).hide();
             jQuery( ".mais-categorias-1" ).click(function() {
-                jQuery( ".icon-categorias" ).show();
+                jQuery( ".icon-categorias" ).show('');
                 jQuery( ".mais-categorias-1" ).hide();
             });
         });
