@@ -21,19 +21,9 @@ $palavras[] = $receive;
 $args1_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    //'s' => $search, 
+    's' => $search, 
     'tax_query' => array(
         'relation' => 'OR',
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'name',                      
-            'terms' => $search,   
-        ),
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'slug',                      
-            'terms' => $palavras,   
-        ),
         array(
             'tag_slug__in' => $palavras,
         ),
@@ -86,24 +76,13 @@ $args1_tags = array(
         ),
     ),
 );
-
 // LOOP FOR SEARCH - APENAS PAGO
 $args2_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    //'s' => $search, 
+    's' => $search, 
     'tax_query' => array(
         'relation' => 'OR',
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'name',                      
-            'terms' => $search,   
-        ),
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'slug',                      
-            'terms' => $palavras,   
-        ),
         array(
             'tag_slug__in' => $palavras,
         ),
@@ -158,19 +137,9 @@ $args2_tags = array(
 $args3_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    //'s' => $search,
+    's' => $search,
     'tax_query' => array(
         'relation' => 'OR',
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'name',                      
-            'terms' => $search,   
-        ),
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'slug',                      
-            'terms' => $palavras,   
-        ),
         array(
             'tag_slug__in' => $palavras,
         ),

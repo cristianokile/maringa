@@ -26,7 +26,7 @@
 						<?php while ( have_posts() ) : the_post();
 						get_template_part( 'template-parts/content', get_post_format() );?>
 						<?php endwhile; ?>
-						<div class="col-12 hidden-xs">
+						<div class="col-12">
 			        		<div class="sidebar-wrapper sidebar-archive row">
 			            		<?php get_template_part( 'template-parts/content', "ads-widget-area" ); ?>
 			            	</div>
@@ -34,7 +34,7 @@
 						<?php the_posts_navigation();
 					}else{
 						get_template_part( 'template-parts/content', 'none' );?>
-						<div class="col-12 hidden-xs">
+						<div class="col-12">
 				    		<div class="sidebar-wrapper sidebar-archive row">
 				        		<?php get_template_part( 'template-parts/content', "ads-widget-area" ); ?>
 				        	</div>

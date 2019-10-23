@@ -278,6 +278,7 @@ add_shortcode('getthecontent','get_thecontent');
 // Custom Shortcodes
 function get_count_posts(){
     global $wp_query; 
+    $countposts = "Foram encontrados:";
     if ( is_search() || is_tag() ){
         // Include Title
         if ( is_search() ){
@@ -290,11 +291,11 @@ function get_count_posts(){
         // Contador
         $qtde = $wp_query->found_posts;
         if ($contador1 == 0) {
-            $countposts = "Nenhum resultado encontrado!";
+            //$countposts = "Nenhum resultado encontrado!";
         }elseif($contador1 == 1) {
-            $countposts = "Foi encontrado: <strong  style='color: #7a7a7a'> 1 resultado</strong>";
+            //$countposts = "Foi encontrado: <strong  style='color: #7a7a7a'> 1 resultado</strong>";
         }else{
-            $countposts = "Foram encontrados: <strong style='color: #7a7a7a'>" . $qtde . " resultados</strong>";
+            //$countposts = "Foram encontrados: <strong style='color: #7a7a7a'>" . $qtde . " resultados</strong>";
         };?>
         <script>
             jQuery("section.wrap-first h2.elementor-heading-title").each(function() {
@@ -310,11 +311,11 @@ function get_count_posts(){
     }else{
         $qtde = $wp_query->found_posts;
         if ($qtde == 0) {
-            $countposts = "Nenhum resultado encontrado!";
+            //$countposts = "Nenhum resultado encontrado!";
         } elseif($qtde == 1) {
-            $countposts = "Foi encontrado: <strong  style='color: #7a7a7a'>" . $qtde . " resultado</strong>";
+            //$countposts = "Foi encontrado: <strong  style='color: #7a7a7a'>" . $qtde . " resultado</strong>";
         }else{
-            $countposts = "Foram encontrados: <strong style='color: #7a7a7a'>" . $qtde . " resultados</strong>";
+            //$countposts = "Foram encontrados: <strong style='color: #7a7a7a'>" . $qtde . " resultados</strong>";
         }    
     }    
     return $countposts;

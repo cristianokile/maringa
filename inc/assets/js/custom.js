@@ -63,5 +63,6 @@
                 jQuery( ".icon-categorias" ).show('');
                 jQuery( ".mais-categorias-1" ).hide();
             });
+
         });
     });

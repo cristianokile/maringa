@@ -2,38 +2,25 @@
 $search = get_search_query(); 
 $palavras = explode(' ', get_search_query());
 
-function seofriendly($string){
-    $string = str_replace(array('[\', \']'), '', $string);
-    $string = preg_replace('/\[.*\]/U', '', $string);
-    $string = preg_replace('/&(amp;)?#?[a-z0-9]+;/i', '-', $string);
-    $string = htmlentities($string, ENT_COMPAT, 'utf-8');
-    $string = preg_replace('/&([a-z])(acute|uml|circ|grave|ring|cedil|slash|tilde|caron|lig|quot|rsquo);/i', '\\1', $string );
-    $string = preg_replace(array('/[^a-z0-9]/i', '/[-]+/') , '-', $string);
-    return strtolower(trim($string, '-'));
-};
+$string = str_replace(array('[\', \']'), '', $search);
+$string = preg_replace('/\[.*\]/U', '', $string);
+$string = preg_replace('/&(amp;)?#?[a-z0-9]+;/i', '-', $string);
+$string = htmlentities($string, ENT_COMPAT, 'utf-8');
+$string = preg_replace('/&([a-z])(acute|uml|circ|grave|ring|cedil|slash|tilde|caron|lig|quot|rsquo);/i', '\\1', $string );
+$string = preg_replace(array('/[^a-z0-9]/i', '/[-]+/') , '-', $string);
+$seofriendly = strtolower(trim($string, '-'));
 
-$receive = seofriendly($search);
+$receive = $seofriendly;
 $palavras[] = $receive;
 
-
 // WP_Query arguments
-// LOOP FOR SEARCH - PAGO E DESTAQUE
+// LOOP FOR SEARCH
 $args1_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    //'s' => $search, 
+    's' => $search, 
     'tax_query' => array(
         'relation' => 'OR',
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'name',                      
-            'terms' => $search,   
-        ),
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'slug',                      
-            'terms' => $palavras,   
-        ),
         array(
             'tag_slug__in' => $palavras,
         ),
@@ -44,10 +31,10 @@ $args1_posts = array(
             'post_name__in' => $palavras,
         ),  
         array(
-            'name' => $palavras,
+            'name' =>   $palavras,
         ),
         array(
-            'title' => $search,
+            'title' =>   $search,
         ),        
     ),    
     'meta_query' => array(
@@ -64,8 +51,7 @@ $args1_posts = array(
         ),
     ),
 );
-
-// LOOP FOR TAG - PAGO E DESTAQUE
+// LOOP FOR TAG
 $args1_tags = array(
     "post_type" => "empresas",
     'post_status' => "publish",
@@ -86,24 +72,13 @@ $args1_tags = array(
         ),
     ),
 );
-
-// LOOP FOR SEARCH - APENAS PAGO
+// LOOP FOR SEARCH
 $args2_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    //'s' => $search, 
+    's' => $search, 
     'tax_query' => array(
         'relation' => 'OR',
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'name',                      
-            'terms' => $search,   
-        ),
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'slug',                      
-            'terms' => $palavras,   
-        ),
         array(
             'tag_slug__in' => $palavras,
         ),
@@ -114,10 +89,10 @@ $args2_posts = array(
             'post_name__in' => $palavras,
         ),  
         array(
-            'name' => $palavras,
+            'name' =>   $palavras,
         ),
         array(
-            'title' => $search,
+            'title' =>   $search,
         ),        
     ),  
     'meta_query' => array(
@@ -134,7 +109,7 @@ $args2_posts = array(
         ),
     ),
 );
-// LOOP FOR TAG - APENAS PAGO
+// LOOP FOR TAG
 $args2_tags = array(
     "post_type" => "empresas",
     'post_status' => "publish",
@@ -154,23 +129,13 @@ $args2_tags = array(
         ),
     ),
 );
-// LOOP FOR SEARCH - GRATUITO
+// LOOP FOR SEARCH
 $args3_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    //'s' => $search,
+    's' => $search,
     'tax_query' => array(
         'relation' => 'OR',
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'name',                      
-            'terms' => $search,   
-        ),
-        array(
-            'taxonomy' => 'categoria',               
-            'field' => 'slug',                      
-            'terms' => $palavras,   
-        ),
         array(
             'tag_slug__in' => $palavras,
         ),
@@ -181,10 +146,10 @@ $args3_posts = array(
             'post_name__in' => $palavras,
         ),  
         array(
-            'name' => $palavras,
+            'name' =>   $palavras,
         ),
         array(
-            'title' => $search,
+            'title' =>   $search,
         ),        
     ),  
     'meta_query' => array(
@@ -201,7 +166,7 @@ $args3_posts = array(
         ),
     ),
 );
-// LOOP FOR TAG - GRATUITO
+// LOOP FOR TAG
 $args3_tags = array(
     "post_type" => "empresas",
     'post_status' => "publish",
@@ -222,26 +187,26 @@ $args3_tags = array(
     ),
 );
 
+
 if ($search == "") {
-    echo do_shortcode('[elementor-template id="2510"]'); 
-    echo "<style>
-        .nav-previous{display:none}
-    </style>"; 
+    $contador1 = 0;
 }else{
+
     // The Query
-    $no_results1 = $no_results2 = $no_results3 = false;
-    $loop1 = new WP_Query( $args1_posts );
-    $loop2 = new WP_Query( $args1_tags );
+     $no_results1 = $no_results2 = $no_results3 = false;
+     $loop1 = new WP_Query( $args1_posts );
+     $loop2 = new WP_Query( $args1_tags );
+     $contador1 = 0;
 
     if ( $loop1->have_posts() ) {
         while ( $loop1->have_posts() ) {
             $loop1->the_post();
-            echo do_shortcode('[elementor-template id="1008"]'); 
+            $contador1++;
         }
     }elseif ( $loop2->have_posts() ) {
         while ( $loop2->have_posts() ) {
             $loop2->the_post();
-                echo do_shortcode('[elementor-template id="1008"]'); 
+                $contador1++;
             }
     }else{
         $no_results1 = true;
@@ -253,12 +218,12 @@ if ($search == "") {
     if ( $loop1->have_posts() ) {
         while ( $loop1->have_posts() ) {
             $loop1->the_post();
-            echo do_shortcode('[elementor-template id="785"]'); 
+            $contador1++;
         }
     }elseif ( $loop2->have_posts() ) {
         while ( $loop2->have_posts() ) {
             $loop2->the_post();
-                echo do_shortcode('[elementor-template id="785"]'); 
+                $contador1++;
             }
     }else{
         $no_results2 = true;
@@ -270,12 +235,12 @@ if ($search == "") {
     if ( $loop1->have_posts() ) {
         while ( $loop1->have_posts() ) {
             $loop1->the_post();
-            echo do_shortcode('[elementor-template id="1421"]');
+            $contador1++;
         }
     }elseif ( $loop2->have_posts() ) {
         while ( $loop2->have_posts() ) {
             $loop2->the_post();
-                echo do_shortcode('[elementor-template id="1421"]');
+                $contador1++;
             }
     }else{
         $no_results3 = true;
@@ -283,8 +248,7 @@ if ($search == "") {
     wp_reset_postdata();
         
     if ( $no_results1 && $no_results2 && $no_results3 ) : 
-        echo do_shortcode('[elementor-template id="1294"]'); 
+        $contador1 = 0;
     endif;
 }
-
 

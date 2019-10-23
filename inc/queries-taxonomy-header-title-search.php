@@ -1,6 +1,5 @@
 <?php
 $search = get_search_query(); 
-$category = get_query_var( 'term' );
 $palavras = explode(' ', get_search_query());
 
 $string = str_replace(array('[\', \']'), '', $search);
@@ -12,20 +11,40 @@ $string = preg_replace(array('/[^a-z0-9]/i', '/[-]+/') , '-', $string);
 $seofriendly = strtolower(trim($string, '-'));
 
 $receive = $seofriendly;
+$palavras[] = $receive;
 
 // WP_Query arguments
-// LOOP FOR SEARCH
+// LOOP FOR SEARCH - PAGO E DESTAQUE
 $args1_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    's' => $search, 
+    //'s' => $search, 
     'tax_query' => array(
-        'relation' => 'AND',
+        'relation' => 'OR',
         array(
-            'field' => $receive, 
-            'terms' => array($search, $palavras, $receive),
-            'include_children' => true,
-            'operator' => 'IN',
+            'taxonomy' => 'categoria',               
+            'field' => 'name',                      
+            'terms' => $search,   
+        ),
+        array(
+            'taxonomy' => 'categoria',               
+            'field' => 'slug',                      
+            'terms' => $palavras,   
+        ),
+        array(
+            'tag_slug__in' => $palavras,
+        ),
+        array(
+            'category__in' => $palavras,
+        ),
+        array(
+            'post_name__in' => $palavras,
+        ),  
+        array(
+            'name' => $palavras,
+        ),
+        array(
+            'title' => $search,
         ),        
     ),    
     'meta_query' => array(
@@ -42,11 +61,12 @@ $args1_posts = array(
         ),
     ),
 );
-// LOOP FOR TAG
+
+// LOOP FOR TAG - PAGO E DESTAQUE
 $args1_tags = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    'tag' => $receive,
+    'tag' => $palavras,
     get_query_var( 'taxonomy' ) => get_query_var( 'term' ),
     'include_children' => true,
     'meta_query' => array(
@@ -63,20 +83,40 @@ $args1_tags = array(
         ),
     ),
 );
-// LOOP FOR SEARCH
+
+// LOOP FOR SEARCH - APENAS PAGO
 $args2_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    's' => $search, 
+    //'s' => $search, 
     'tax_query' => array(
-        'relation' => 'AND',
+        'relation' => 'OR',
         array(
-            'field' => $receive, 
-            'terms' => array($search, $palavras, $receive),
-            'include_children' => true,
-            'operator' => 'IN',
+            'taxonomy' => 'categoria',               
+            'field' => 'name',                      
+            'terms' => $search,   
+        ),
+        array(
+            'taxonomy' => 'categoria',               
+            'field' => 'slug',                      
+            'terms' => $palavras,   
+        ),
+        array(
+            'tag_slug__in' => $palavras,
+        ),
+        array(
+            'category__in' => $palavras,
+        ),
+        array(
+            'post_name__in' => $palavras,
+        ),  
+        array(
+            'name' => $palavras,
+        ),
+        array(
+            'title' => $search,
         ),        
-    ),
+    ),  
     'meta_query' => array(
         'relation' => 'AND',
         array(
@@ -91,11 +131,11 @@ $args2_posts = array(
         ),
     ),
 );
-// LOOP FOR TAG
+// LOOP FOR TAG - APENAS PAGO
 $args2_tags = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    'tag' => $receive,
+    'tag' => $palavras,
     get_query_var( 'taxonomy' ) => get_query_var( 'term' ),
     'meta_query' => array(
         'relation' => 'AND',
@@ -111,20 +151,39 @@ $args2_tags = array(
         ),
     ),
 );
-// LOOP FOR SEARCH
+// LOOP FOR SEARCH - GRATUITO
 $args3_posts = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    's' => $search, 
+    //'s' => $search,
     'tax_query' => array(
-        'relation' => 'AND',
+        'relation' => 'OR',
         array(
-            'field' => $receive, 
-            'terms' => array($search, $palavras, $receive),
-            'include_children' => true,
-            'operator' => 'IN',
+            'taxonomy' => 'categoria',               
+            'field' => 'name',                      
+            'terms' => $search,   
+        ),
+        array(
+            'taxonomy' => 'categoria',               
+            'field' => 'slug',                      
+            'terms' => $palavras,   
+        ),
+        array(
+            'tag_slug__in' => $palavras,
+        ),
+        array(
+            'category__in' => $palavras,
+        ),
+        array(
+            'post_name__in' => $palavras,
+        ),  
+        array(
+            'name' => $palavras,
+        ),
+        array(
+            'title' => $search,
         ),        
-    ),
+    ),  
     'meta_query' => array(
         'relation' => 'AND',
         array(
@@ -139,11 +198,11 @@ $args3_posts = array(
         ),
     ),
 );
-// LOOP FOR TAG
+// LOOP FOR TAG - GRATUITO
 $args3_tags = array(
     "post_type" => "empresas",
     'post_status' => "publish",
-    'tag' => $receive,
+    'tag' => $palavras,
     get_query_var( 'taxonomy' ) => get_query_var( 'term' ),
     'meta_query' => array(
         'relation' => 'AND',
@@ -159,6 +218,7 @@ $args3_tags = array(
         ),
     ),
 );
+
 
 if ($search == "") {
     $contador1 = 0;

@@ -20,7 +20,7 @@
 				<div class="col">
 				<?php } 
 					get_template_part( 'template-parts/content', "taxonomy" ); ?>
-					<div class="col-12 hidden-xs">
+					<div class="col-12">
 			        	<div class="sidebar-wrapper sidebar-archive row">
 			           		<?php get_template_part( 'template-parts/content', "ads-widget-area" ); ?>
 			           	</div>
