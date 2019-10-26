@@ -11,7 +11,7 @@ $string = preg_replace('/&([a-z])(acute|uml|circ|grave|ring|cedil|slash|tilde|ca
 $string = preg_replace(array('/[^a-z0-9]/i', '/[-]+/') , '-', $string);
 $seofriendly = strtolower(trim($string, '-'));
 
-$category = $seofriendly;
+$category = $seofriendly;z
 
 $args1 = array(
     'post_type' => 'empresas',
