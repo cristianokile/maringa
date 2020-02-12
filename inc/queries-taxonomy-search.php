@@ -332,6 +332,8 @@ $args3_tags = array(
     ),
 );
 
+// RUN SEARCH
+
 if ($search == "") {
     echo do_shortcode('[elementor-template id="2510"]'); 
     echo "<style>
